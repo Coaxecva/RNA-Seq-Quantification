@@ -407,6 +407,24 @@ func (I *IndexC) FindGenomeR(query1 []byte, query2 []byte, maxInsert int, rounds
 // 	}
 // }
 
+func reverse_complement(s []byte) []byte {
+	rs := make([]byte, len(s))
+	for i := 0; i < len(s); i++ {
+		if s[i] == 'A' {
+			rs[len(s)-i-1] = 'T'
+		} else if s[i] == 'T' {
+			rs[len(s)-i-1] = 'A'
+		} else if s[i] == 'C' {
+			rs[len(s)-i-1] = 'G'
+		} else if s[i] == 'G' {
+			rs[len(s)-i-1] = 'C'
+		} else {
+			rs[len(s)-i-1] = s[i]
+		}
+	}
+	return rs
+}
+
 //-----------------------------------------------------------------------------
 func (I *IndexC) ReadFasta(file string) {
 	f, err := os.Open(file)
@@ -425,10 +443,11 @@ func (I *IndexC) ReadFasta(file string) {
 		line := scanner.Bytes()
 		if len(line) > 0 {
 			line = bytes.Trim(line, "\n\r ")
-			if line[0] != '>' {
+			if line[0] != '>' {				
 				byte_array = append(byte_array,line...)
 				cur_len += len(line)
-			} else {
+				cur_len = cur_len + cur_len + 5
+			} else {				
 				items := bytes.SplitN(line[1:], []byte{' '}, 2)
 				I.GENOME_ID = append(I.GENOME_ID, string(items[0]))
 				I.GENOME_DES = append(I.GENOME_DES, string(items[1]))
@@ -437,8 +456,11 @@ func (I *IndexC) ReadFasta(file string) {
 				}
 				cur_len = 0
 				if len(byte_array) > 0 {
+					byte_array = append(byte_array, []byte("NNNNN")...)
+					byte_array = append(byte_array, reverse_complement(byte_array)...)
 					byte_array = append(byte_array, byte('|'))
-				}
+					//fmt.Println(string(byte_array))
+				}			
 			}
 			i++
 		}
