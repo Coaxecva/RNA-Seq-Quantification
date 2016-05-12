@@ -71,7 +71,7 @@ func main() {
 				read2 = bytes.TrimSpace(line2)
 				//fmt.Println("r1: "+string(read1))			
 				//fmt.Println("r2: "+string(read2))
-				seqs := idx.FindGenomeR(read1, reverse_complement(read2), 1500, 1)
+				seqs := idx.FindGenomeR(read1, reverse_complement(read2), 1500, 100)
 				//fmt.Println(seqs)
 				if _, ok := seqs[cur_genome]; ok {
 					tp++
