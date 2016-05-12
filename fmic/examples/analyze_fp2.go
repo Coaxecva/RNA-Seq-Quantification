@@ -63,15 +63,18 @@ func main() {
 
 			if i%4 == 1 {
 				read1 = bytes.TrimSpace(line)
+				fmt.Println(read1)
 			} else if i%4 == 3 {
 				read2 = bytes.TrimSpace(line)
+				fmt.Println(read2)				
 				seqs := idx.FindGenomeR(read1, reverse_complement(read2), 1500, 100)
+				fmt.Println(seqs)
 				if _, ok := seqs[cur_genome]; ok {
 					tp++
 					fp += len(seqs) - 1
 				} else {
 					fn++
-					fmt.Println("False Negative", cur_genome, seqs)
+					//fmt.Println("False Negative", cur_genome, seqs)
 				}
 			}
 		}
