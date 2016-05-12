@@ -458,29 +458,46 @@ func (I *IndexC) ReadFasta(file string) {
 					I.LENS = append(I.LENS, indexType(cur_len))
 				}
 				cur_len = 0
-				if len(byte_array) > 0 {					
-					byte_array = append(byte_array, 
-						append([]byte("NNNNN"), reverse_complement(byte_array)...)...)					
+				if len(byte_array) > 0 {										
 					byte_array = append(byte_array, byte('|'))					
 				}			
 			}
 			i++
 		}
 	}
-	byte_array = append(byte_array, 
-		append([]byte("NNNNN"), reverse_complement(byte_array)...)...)
-	fmt.Println(string(byte_array))
+
+	byte_array = append(byte_array, byte('|'))
+	//fmt.Println(string(byte_array))
+	st := 0
+	seq_comp := make([]byte, 0)
+	for i:=0; i<len(byte_array); i++ {
+		if byte_array[i] == byte('|') {
+			seq_comp = append(seq_comp, byte_array[st:i]...)
+			seq_comp = append(seq_comp, []byte("NNNNN")...)
+			seq_comp = append(seq_comp, reverse_complement(byte_array[st:i])...)
+			seq_comp = append(seq_comp, byte('|'))			
+			st = i+1			
+		}
+	}
+	//fmt.Println(string(seq_comp[:len(seq_comp)-1]))
+	seq_comp = seq_comp[:len(seq_comp)-1]
+
 	cur_len = cur_len + cur_len + 5
 	I.LENS = append(I.LENS, indexType(cur_len))
 	// Reverse the sequence
-	for left, right := 0, len(byte_array)-1; left < right; left, right = left+1, right-1 {
-	    byte_array[left], byte_array[right] = byte_array[right], byte_array[left]
+	//for left, right := 0, len(byte_array)-1; left < right; left, right = left+1, right-1 {
+	//    byte_array[left], byte_array[right] = byte_array[right], byte_array[left]
+	//}
+	for left, right := 0, len(seq_comp)-1; left < right; left, right = left+1, right-1 {
+	    seq_comp[left], seq_comp[right] = seq_comp[right], seq_comp[left]
 	}
-	I.SEQ = append(byte_array, byte('$'))
-	fmt.Println(I.GENOME_ID)
-	fmt.Println(I.GENOME_DES)
-	fmt.Println(I.LENS)
-	fmt.Println(string(I.SEQ))
+
+	//I.SEQ = append(byte_array, byte('$'))
+	I.SEQ = append(seq_comp, byte('$'))
+	//fmt.Println(I.GENOME_ID)
+	//fmt.Println(I.GENOME_DES)
+	//fmt.Println(I.LENS)
+	//fmt.Println(string(I.SEQ))
 }
 
 //-----------------------------------------------------------------------------
