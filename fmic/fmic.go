@@ -54,6 +54,7 @@ func CompressedIndex(file string, multiple bool, compression_ratio int) *IndexC 
 
 	// GET THE SEQUENCE
 	I.ReadFasta(file)
+	//fmt.Println(I.SEQ)
 
 	// BUILD SUFFIX ARRAY
 	I.LEN = indexType(len(I.SEQ))
@@ -234,14 +235,16 @@ func (I *IndexC) FindGenomeD(query1 []byte, query2 []byte, maxInsert int) map[in
 //-----------------------------------------------------------------------------
 func (I *IndexC) FindGenomeR(query1 []byte, query2 []byte, maxInsert int, rounds int) map[int]int {
 	k1, k2 := 0,0	// init round starts from fixed index
-	end := 20
+	end := 0//20
 	regions := map[int]int{}
 	for i:=0; i<rounds; i++ {
 		id1, pos1, idSet1 := I.regionSearch(query1, k1)
+		fmt.Println(id1, pos1, idSet1)
 		id2, pos2, idSet2 := I.regionSearch(query2, k2)
+		fmt.Println(id1, pos1, idSet1)
 		out := map[int]int{}
 		if id1==id2 && id1!=-1 && ((pos1>=pos2 && int(pos1-pos2)<=maxInsert)||(pos2>pos1 && int(pos2-pos1)<=maxInsert)) {
-			 fmt.Println("1:", pos1, pos2, out)
+			//fmt.Println("1:", pos1, pos2, out)
 			out[int(id1)] = 1
 			return out
 		} else {
@@ -254,7 +257,7 @@ func (I *IndexC) FindGenomeR(query1 []byte, query2 []byte, maxInsert int, rounds
 				}
 			}
 			if len(out) == 1 {  // conservative
-				 fmt.Println("2:", pos1, pos2, out)
+				//fmt.Println("2:", pos1, pos2, out)
 				return out
 			}
 		}
@@ -445,32 +448,39 @@ func (I *IndexC) ReadFasta(file string) {
 			line = bytes.Trim(line, "\n\r ")
 			if line[0] != '>' {				
 				byte_array = append(byte_array,line...)
-				cur_len += len(line)
-				cur_len = cur_len + cur_len + 5
+				cur_len += len(line)				
 			} else {				
 				items := bytes.SplitN(line[1:], []byte{' '}, 2)
 				I.GENOME_ID = append(I.GENOME_ID, string(items[0]))
 				I.GENOME_DES = append(I.GENOME_DES, string(items[1]))
 				if cur_len != 0 {
+					cur_len = cur_len + cur_len + 5
 					I.LENS = append(I.LENS, indexType(cur_len))
 				}
 				cur_len = 0
-				if len(byte_array) > 0 {
-					byte_array = append(byte_array, []byte("NNNNN")...)
-					byte_array = append(byte_array, reverse_complement(byte_array)...)
-					byte_array = append(byte_array, byte('|'))
-					//fmt.Println(string(byte_array))
+				if len(byte_array) > 0 {					
+					byte_array = append(byte_array, 
+						append([]byte("NNNNN"), reverse_complement(byte_array)...)...)					
+					byte_array = append(byte_array, byte('|'))					
 				}			
 			}
 			i++
 		}
 	}
+	byte_array = append(byte_array, 
+		append([]byte("NNNNN"), reverse_complement(byte_array)...)...)
+	fmt.Println(string(byte_array))
+	cur_len = cur_len + cur_len + 5
 	I.LENS = append(I.LENS, indexType(cur_len))
 	// Reverse the sequence
 	for left, right := 0, len(byte_array)-1; left < right; left, right = left+1, right-1 {
 	    byte_array[left], byte_array[right] = byte_array[right], byte_array[left]
 	}
 	I.SEQ = append(byte_array, byte('$'))
+	fmt.Println(I.GENOME_ID)
+	fmt.Println(I.GENOME_DES)
+	fmt.Println(I.LENS)
+	fmt.Println(string(I.SEQ))
 }
 
 //-----------------------------------------------------------------------------
