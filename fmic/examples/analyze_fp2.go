@@ -78,7 +78,7 @@ func main() {
 					fp += len(seqs) - 1
 				} else {
 					fn++
-					fmt.Println("False Negative", cur_genome, seqs)
+					//fmt.Println("False Negative", cur_genome, seqs)
 				}
 			}
 		}
