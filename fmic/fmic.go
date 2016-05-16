@@ -241,9 +241,9 @@ func (I *IndexC) FindGenomeR(query1 []byte, query2 []byte, maxInsert int, rounds
 	//rounds = 1
 	for i:=0; i<rounds; i++ {
 		id1, pos1, idSet1 := I.regionSearch(query1, k1)
-		//fmt.Println(id1, pos1, idSet1)
+		fmt.Println(id1, pos1, idSet1)
 		id2, pos2, idSet2 := I.regionSearch(query2, k2)
-		//fmt.Println(id1, pos1, idSet1)
+		fmt.Println(id2, pos2, idSet2)
 		//fmt.Println("------------")
 		out := map[int]int{}
 		if id1==id2 && id1!=-1 && ((pos1>=pos2 && int(pos1-pos2)<=maxInsert)||(pos2>pos1 && int(pos2-pos1)<=maxInsert)) {
