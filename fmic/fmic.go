@@ -260,7 +260,7 @@ func (I *IndexC) FindGenomeR(query1 []byte, query2 []byte, maxInsert int, rounds
 				}
 			}
 			//if len(out) == 1 {  // conservative
-			if len(out) != 1 {  // liberal
+			if len(out) >= 1 {  // liberal
 				//fmt.Println("2:", pos1, pos2, out)
 				return out
 			}
