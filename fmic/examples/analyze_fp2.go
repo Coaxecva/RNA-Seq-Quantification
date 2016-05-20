@@ -45,6 +45,8 @@ func main() {
 	}
 
 	//fmt.Println(gid)
+	//
+	count := make([]int, 20)	
 
 	fmt.Println("querying reads...")
 	for {
@@ -73,9 +75,11 @@ func main() {
 				//fmt.Println("r2: "+string(read2))
 				seqs := idx.FindGenomeR(read1, reverse_complement(read2), 1500, 100)
 				//fmt.Println(seqs)
+				//fmt.Println(cur_genome)
 				if _, ok := seqs[cur_genome]; ok {
 					tp++
 					fp += len(seqs) - 1
+					count[cur_genome]++
 				} else {
 					fn++
 					//fmt.Println("False Negative", cur_genome, seqs)
@@ -85,6 +89,10 @@ func main() {
 		i++
 	}
 	fmt.Println(tp, fp, fn, float64(tp)/float64(tp+fp), float64(tp)/float64(tp+fn))
+	// Loop over the map.
+    for i := range count {
+		fmt.Println(i, "=", count[i])
+    }	
 }
 
 func reverse_complement(s []byte) []byte {
