@@ -1,7 +1,7 @@
 library(polyester)
 library(Biostrings)
 
-fold_changes = matrix(c(4,4,rep(1,916),1,1,4,4,rep(1,914)), nrow=20)
+fold_changes = matrix(c(4,4,rep(1,18),1,1,4,4,rep(1,16)), nrow=20)
 head(fold_changes)
 
 # FASTA annotation
