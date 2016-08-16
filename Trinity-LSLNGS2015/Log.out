@@ -1,0 +1,691 @@
+STAR version=STAR_2.5.1b_modified
+STAR compilation time,server,dir=Thu Feb 25 15:00:45 EST 2016 florence.cshl.edu:/sonas-hs/gingeras/nlsas_norepl/user/dobin/STAR/STAR.sandbox/source
+##### DEFAULT parameters:
+versionSTAR                       20201
+versionGenome                     20101   20200   
+parametersFiles                   -   
+sysShell                          -
+runMode                           alignReads
+runThreadN                        1
+runDirPerm                        User_RWX
+runRNGseed                        777
+genomeDir                         ./GenomeDir/
+genomeLoad                        NoSharedMemory
+genomeFastaFiles                  -   
+genomeSAindexNbases               14
+genomeChrBinNbits                 18
+genomeSAsparseD                   1
+genomeSuffixLengthMax             18446744073709551615
+readFilesIn                       Read1   Read2   
+readFilesCommand                  -   
+readMatesLengthsIn                NotEqual
+readMapNumber                     18446744073709551615
+readNameSeparator                 /   
+inputBAMfile                      -
+bamRemoveDuplicatesType           -
+bamRemoveDuplicatesMate2basesN    0
+limitGenomeGenerateRAM            31000000000
+limitIObufferSize                 150000000
+limitOutSAMoneReadBytes           100000
+limitOutSJcollapsed               1000000
+limitOutSJoneRead                 1000
+limitBAMsortRAM                   0
+limitSjdbInsertNsj                1000000
+outFileNamePrefix                 ./
+outTmpDir                         -
+outStd                            Log
+outReadsUnmapped                  None
+outQSconversionAdd                0
+outMultimapperOrder               Old_2.4
+outSAMtype                        SAM   
+outSAMmode                        Full
+outSAMstrandField                 None
+outSAMattributes                  Standard   
+outSAMunmapped                    None   
+outSAMorder                       Paired
+outSAMprimaryFlag                 OneBestScore
+outSAMreadID                      Standard
+outSAMmapqUnique                  255
+outSAMflagOR                      0
+outSAMflagAND                     65535
+outSAMattrRGline                  -   
+outSAMheaderHD                    -   
+outSAMheaderPG                    -   
+outSAMheaderCommentFile           -
+outBAMcompression                 1
+outBAMsortingThreadN              0
+outSAMfilter                      None   
+outSAMmultNmax                    18446744073709551615
+outSAMattrIHstart                 1
+outSJfilterReads                  All
+outSJfilterCountUniqueMin         3   1   1   1   
+outSJfilterCountTotalMin          3   1   1   1   
+outSJfilterOverhangMin            30   12   12   12   
+outSJfilterDistToOtherSJmin       10   0   5   10   
+outSJfilterIntronMaxVsReadN       50000   100000   200000   
+outWigType                        None   
+outWigStrand                      Stranded   
+outWigReferencesPrefix            -
+outWigNorm                        RPM   
+outFilterType                     Normal
+outFilterMultimapNmax             10
+outFilterMultimapScoreRange       1
+outFilterScoreMin                 0
+outFilterScoreMinOverLread        0.66
+outFilterMatchNmin                0
+outFilterMatchNminOverLread       0.66
+outFilterMismatchNmax             10
+outFilterMismatchNoverLmax        0.3
+outFilterMismatchNoverReadLmax    1
+outFilterIntronMotifs             None
+clip5pNbases                      0   
+clip3pNbases                      0   
+clip3pAfterAdapterNbases          0   
+clip3pAdapterSeq                  -   
+clip3pAdapterMMp                  0.1   
+winBinNbits                       16
+winAnchorDistNbins                9
+winFlankNbins                     4
+winAnchorMultimapNmax             50
+scoreGap                          0
+scoreGapNoncan                    -8
+scoreGapGCAG                      -4
+scoreGapATAC                      -8
+scoreStitchSJshift                1
+scoreGenomicLengthLog2scale       -0.25
+scoreDelBase                      -2
+scoreDelOpen                      -2
+scoreInsOpen                      -2
+scoreInsBase                      -2
+seedSearchLmax                    0
+seedSearchStartLmax               50
+seedSearchStartLmaxOverLread      1
+seedPerReadNmax                   1000
+seedPerWindowNmax                 50
+seedNoneLociPerWindow             10
+seedMultimapNmax                  10000
+alignIntronMin                    21
+alignIntronMax                    0
+alignMatesGapMax                  0
+alignTranscriptsPerReadNmax       10000
+alignSJoverhangMin                5
+alignSJDBoverhangMin              3
+alignSJstitchMismatchNmax         0   -1   0   0   
+alignSplicedMateMapLmin           0
+alignSplicedMateMapLminOverLmate    0.66
+alignWindowsPerReadNmax           10000
+alignTranscriptsPerWindowNmax     100
+alignEndsType                     Local
+alignSoftClipAtReferenceEnds      Yes
+chimSegmentMin                    0
+chimScoreMin                      0
+chimScoreDropMax                  20
+chimScoreSeparation               10
+chimScoreJunctionNonGTAG          -1
+chimJunctionOverhangMin           20
+chimOutType                       SeparateSAMold
+chimFilter                        banGenomicN   
+chimSegmentReadGapMax             0
+sjdbFileChrStartEnd               -   
+sjdbGTFfile                       -
+sjdbGTFchrPrefix                  -
+sjdbGTFfeatureExon                exon
+sjdbGTFtagExonParentTranscript    transcript_id
+sjdbGTFtagExonParentGene          gene_id
+sjdbOverhang                      100
+sjdbScore                         2
+sjdbInsertSave                    Basic
+quantMode                         -   
+quantTranscriptomeBAMcompression    1
+quantTranscriptomeBan             IndelSoftclipSingleend
+twopass1readsN                    18446744073709551615
+twopassMode                       None
+##### Command Line:
+../STAR/bin/Linux_x86_64_static/STAR --runThreadN 40 --runMode genomeGenerate --genomeDir GENOME_data/star --genomeFastaFiles GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa
+##### Initial USER parameters from Command Line:
+###### All USER parameters from Command Line:
+runThreadN                    40     ~RE-DEFINED
+runMode                       genomeGenerate     ~RE-DEFINED
+genomeDir                     GENOME_data/star     ~RE-DEFINED
+genomeFastaFiles              GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa        ~RE-DEFINED
+##### Finished reading parameters from all sources
+
+##### Final user re-defined parameters-----------------:
+runMode                           genomeGenerate
+runThreadN                        40
+genomeDir                         GENOME_data/star
+genomeFastaFiles                  GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa   
+
+-------------------------------
+##### Final effective command line:
+../STAR/bin/Linux_x86_64_static/STAR   --runMode genomeGenerate   --runThreadN 40   --genomeDir GENOME_data/star   --genomeFastaFiles GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa   
+
+##### Final parameters after user input--------------------------------:
+versionSTAR                       20201
+versionGenome                     20101   20200   
+parametersFiles                   -   
+sysShell                          -
+runMode                           genomeGenerate
+runThreadN                        40
+runDirPerm                        User_RWX
+runRNGseed                        777
+genomeDir                         GENOME_data/star
+genomeLoad                        NoSharedMemory
+genomeFastaFiles                  GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa   
+genomeSAindexNbases               14
+genomeChrBinNbits                 18
+genomeSAsparseD                   1
+genomeSuffixLengthMax             18446744073709551615
+readFilesIn                       Read1   Read2   
+readFilesCommand                  -   
+readMatesLengthsIn                NotEqual
+readMapNumber                     18446744073709551615
+readNameSeparator                 /   
+inputBAMfile                      -
+bamRemoveDuplicatesType           -
+bamRemoveDuplicatesMate2basesN    0
+limitGenomeGenerateRAM            31000000000
+limitIObufferSize                 150000000
+limitOutSAMoneReadBytes           100000
+limitOutSJcollapsed               1000000
+limitOutSJoneRead                 1000
+limitBAMsortRAM                   0
+limitSjdbInsertNsj                1000000
+outFileNamePrefix                 ./
+outTmpDir                         -
+outStd                            Log
+outReadsUnmapped                  None
+outQSconversionAdd                0
+outMultimapperOrder               Old_2.4
+outSAMtype                        SAM   
+outSAMmode                        Full
+outSAMstrandField                 None
+outSAMattributes                  Standard   
+outSAMunmapped                    None   
+outSAMorder                       Paired
+outSAMprimaryFlag                 OneBestScore
+outSAMreadID                      Standard
+outSAMmapqUnique                  255
+outSAMflagOR                      0
+outSAMflagAND                     65535
+outSAMattrRGline                  -   
+outSAMheaderHD                    -   
+outSAMheaderPG                    -   
+outSAMheaderCommentFile           -
+outBAMcompression                 1
+outBAMsortingThreadN              0
+outSAMfilter                      None   
+outSAMmultNmax                    18446744073709551615
+outSAMattrIHstart                 1
+outSJfilterReads                  All
+outSJfilterCountUniqueMin         3   1   1   1   
+outSJfilterCountTotalMin          3   1   1   1   
+outSJfilterOverhangMin            30   12   12   12   
+outSJfilterDistToOtherSJmin       10   0   5   10   
+outSJfilterIntronMaxVsReadN       50000   100000   200000   
+outWigType                        None   
+outWigStrand                      Stranded   
+outWigReferencesPrefix            -
+outWigNorm                        RPM   
+outFilterType                     Normal
+outFilterMultimapNmax             10
+outFilterMultimapScoreRange       1
+outFilterScoreMin                 0
+outFilterScoreMinOverLread        0.66
+outFilterMatchNmin                0
+outFilterMatchNminOverLread       0.66
+outFilterMismatchNmax             10
+outFilterMismatchNoverLmax        0.3
+outFilterMismatchNoverReadLmax    1
+outFilterIntronMotifs             None
+clip5pNbases                      0   
+clip3pNbases                      0   
+clip3pAfterAdapterNbases          0   
+clip3pAdapterSeq                  -   
+clip3pAdapterMMp                  0.1   
+winBinNbits                       16
+winAnchorDistNbins                9
+winFlankNbins                     4
+winAnchorMultimapNmax             50
+scoreGap                          0
+scoreGapNoncan                    -8
+scoreGapGCAG                      -4
+scoreGapATAC                      -8
+scoreStitchSJshift                1
+scoreGenomicLengthLog2scale       -0.25
+scoreDelBase                      -2
+scoreDelOpen                      -2
+scoreInsOpen                      -2
+scoreInsBase                      -2
+seedSearchLmax                    0
+seedSearchStartLmax               50
+seedSearchStartLmaxOverLread      1
+seedPerReadNmax                   1000
+seedPerWindowNmax                 50
+seedNoneLociPerWindow             10
+seedMultimapNmax                  10000
+alignIntronMin                    21
+alignIntronMax                    0
+alignMatesGapMax                  0
+alignTranscriptsPerReadNmax       10000
+alignSJoverhangMin                5
+alignSJDBoverhangMin              3
+alignSJstitchMismatchNmax         0   -1   0   0   
+alignSplicedMateMapLmin           0
+alignSplicedMateMapLminOverLmate    0.66
+alignWindowsPerReadNmax           10000
+alignTranscriptsPerWindowNmax     100
+alignEndsType                     Local
+alignSoftClipAtReferenceEnds      Yes
+chimSegmentMin                    0
+chimScoreMin                      0
+chimScoreDropMax                  20
+chimScoreSeparation               10
+chimScoreJunctionNonGTAG          -1
+chimJunctionOverhangMin           20
+chimOutType                       SeparateSAMold
+chimFilter                        banGenomicN   
+chimSegmentReadGapMax             0
+sjdbFileChrStartEnd               -   
+sjdbGTFfile                       -
+sjdbGTFchrPrefix                  -
+sjdbGTFfeatureExon                exon
+sjdbGTFtagExonParentTranscript    transcript_id
+sjdbGTFtagExonParentGene          gene_id
+sjdbOverhang                      100
+sjdbScore                         2
+sjdbInsertSave                    Basic
+quantMode                         -   
+quantTranscriptomeBAMcompression    1
+quantTranscriptomeBan             IndelSoftclipSingleend
+twopass1readsN                    18446744073709551615
+twopassMode                       None
+----------------------------------------
+
+Finished loading and checking parameters
+Mar 01 00:55:11 ... starting to generate Genome files
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 0  "1" chrStart: 0
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 1  "10" chrStart: 249036800
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 2  "11" chrStart: 382992384
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 3  "12" chrStart: 518258688
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 4  "13" chrStart: 651689984
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 5  "14" chrStart: 766246912
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 6  "15" chrStart: 873463808
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 7  "16" chrStart: 975699968
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 8  "17" chrStart: 1066139648
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 9  "18" chrStart: 1149501440
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 10  "19" chrStart: 1229979648
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 11  "2" chrStart: 1288699904
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 12  "20" chrStart: 1530920960
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 13  "21" chrStart: 1595408384
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 14  "22" chrStart: 1642332160
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 15  "3" chrStart: 1693188096
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 16  "4" chrStart: 1891631104
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 17  "5" chrStart: 2081947648
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 18  "6" chrStart: 2263613440
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 19  "7" chrStart: 2434531328
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 20  "8" chrStart: 2593914880
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 21  "9" chrStart: 2739142656
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 22  "MT" chrStart: 2877554688
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 23  "X" chrStart: 2877816832
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 24  "Y" chrStart: 3034054656
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 25  "KI270728.1" chrStart: 3091464192
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 26  "KI270727.1" chrStart: 3093561344
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 27  "KI270442.1" chrStart: 3094085632
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 28  "KI270729.1" chrStart: 3094609920
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 29  "GL000225.1" chrStart: 3095134208
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 30  "KI270743.1" chrStart: 3095396352
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 31  "GL000008.2" chrStart: 3095658496
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 32  "GL000009.2" chrStart: 3095920640
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 33  "KI270747.1" chrStart: 3096182784
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 34  "KI270722.1" chrStart: 3096444928
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 35  "GL000194.1" chrStart: 3096707072
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 36  "KI270742.1" chrStart: 3096969216
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 37  "GL000205.2" chrStart: 3097231360
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 38  "GL000195.1" chrStart: 3097493504
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 39  "KI270736.1" chrStart: 3097755648
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 40  "KI270733.1" chrStart: 3098017792
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 41  "GL000224.1" chrStart: 3098279936
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 42  "GL000219.1" chrStart: 3098542080
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 43  "KI270719.1" chrStart: 3098804224
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 44  "GL000216.2" chrStart: 3099066368
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 45  "KI270712.1" chrStart: 3099328512
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 46  "KI270706.1" chrStart: 3099590656
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 47  "KI270725.1" chrStart: 3099852800
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 48  "KI270744.1" chrStart: 3100114944
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 49  "KI270734.1" chrStart: 3100377088
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 50  "GL000213.1" chrStart: 3100639232
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 51  "GL000220.1" chrStart: 3100901376
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 52  "KI270715.1" chrStart: 3101163520
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 53  "GL000218.1" chrStart: 3101425664
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 54  "KI270749.1" chrStart: 3101687808
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 55  "KI270741.1" chrStart: 3101949952
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 56  "GL000221.1" chrStart: 3102212096
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 57  "KI270716.1" chrStart: 3102474240
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 58  "KI270731.1" chrStart: 3102736384
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 59  "KI270751.1" chrStart: 3102998528
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 60  "KI270750.1" chrStart: 3103260672
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 61  "KI270519.1" chrStart: 3103522816
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 62  "GL000214.1" chrStart: 3103784960
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 63  "KI270708.1" chrStart: 3104047104
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 64  "KI270730.1" chrStart: 3104309248
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 65  "KI270438.1" chrStart: 3104571392
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 66  "KI270737.1" chrStart: 3104833536
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 67  "KI270721.1" chrStart: 3105095680
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 68  "KI270738.1" chrStart: 3105357824
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 69  "KI270748.1" chrStart: 3105619968
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 70  "KI270435.1" chrStart: 3105882112
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 71  "GL000208.1" chrStart: 3106144256
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 72  "KI270538.1" chrStart: 3106406400
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 73  "KI270756.1" chrStart: 3106668544
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 74  "KI270739.1" chrStart: 3106930688
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 75  "KI270757.1" chrStart: 3107192832
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 76  "KI270709.1" chrStart: 3107454976
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 77  "KI270746.1" chrStart: 3107717120
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 78  "KI270753.1" chrStart: 3107979264
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 79  "KI270589.1" chrStart: 3108241408
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 80  "KI270726.1" chrStart: 3108503552
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 81  "KI270735.1" chrStart: 3108765696
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 82  "KI270711.1" chrStart: 3109027840
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 83  "KI270745.1" chrStart: 3109289984
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 84  "KI270714.1" chrStart: 3109552128
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 85  "KI270732.1" chrStart: 3109814272
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 86  "KI270713.1" chrStart: 3110076416
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 87  "KI270754.1" chrStart: 3110338560
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 88  "KI270710.1" chrStart: 3110600704
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 89  "KI270717.1" chrStart: 3110862848
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 90  "KI270724.1" chrStart: 3111124992
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 91  "KI270720.1" chrStart: 3111387136
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 92  "KI270723.1" chrStart: 3111649280
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 93  "KI270718.1" chrStart: 3111911424
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 94  "KI270317.1" chrStart: 3112173568
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 95  "KI270740.1" chrStart: 3112435712
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 96  "KI270755.1" chrStart: 3112697856
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 97  "KI270707.1" chrStart: 3112960000
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 98  "KI270579.1" chrStart: 3113222144
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 99  "KI270752.1" chrStart: 3113484288
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 100  "KI270512.1" chrStart: 3113746432
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 101  "KI270322.1" chrStart: 3114008576
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 102  "GL000226.1" chrStart: 3114270720
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 103  "KI270311.1" chrStart: 3114532864
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 104  "KI270366.1" chrStart: 3114795008
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 105  "KI270511.1" chrStart: 3115057152
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 106  "KI270448.1" chrStart: 3115319296
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 107  "KI270521.1" chrStart: 3115581440
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 108  "KI270581.1" chrStart: 3115843584
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 109  "KI270582.1" chrStart: 3116105728
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 110  "KI270515.1" chrStart: 3116367872
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 111  "KI270588.1" chrStart: 3116630016
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 112  "KI270591.1" chrStart: 3116892160
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 113  "KI270522.1" chrStart: 3117154304
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 114  "KI270507.1" chrStart: 3117416448
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 115  "KI270590.1" chrStart: 3117678592
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 116  "KI270584.1" chrStart: 3117940736
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 117  "KI270320.1" chrStart: 3118202880
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 118  "KI270382.1" chrStart: 3118465024
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 119  "KI270468.1" chrStart: 3118727168
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 120  "KI270467.1" chrStart: 3118989312
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 121  "KI270362.1" chrStart: 3119251456
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 122  "KI270517.1" chrStart: 3119513600
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 123  "KI270593.1" chrStart: 3119775744
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 124  "KI270528.1" chrStart: 3120037888
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 125  "KI270587.1" chrStart: 3120300032
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 126  "KI270364.1" chrStart: 3120562176
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 127  "KI270371.1" chrStart: 3120824320
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 128  "KI270333.1" chrStart: 3121086464
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 129  "KI270374.1" chrStart: 3121348608
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 130  "KI270411.1" chrStart: 3121610752
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 131  "KI270414.1" chrStart: 3121872896
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 132  "KI270510.1" chrStart: 3122135040
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 133  "KI270390.1" chrStart: 3122397184
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 134  "KI270375.1" chrStart: 3122659328
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 135  "KI270420.1" chrStart: 3122921472
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 136  "KI270509.1" chrStart: 3123183616
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 137  "KI270315.1" chrStart: 3123445760
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 138  "KI270302.1" chrStart: 3123707904
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 139  "KI270518.1" chrStart: 3123970048
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 140  "KI270530.1" chrStart: 3124232192
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 141  "KI270304.1" chrStart: 3124494336
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 142  "KI270418.1" chrStart: 3124756480
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 143  "KI270424.1" chrStart: 3125018624
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 144  "KI270417.1" chrStart: 3125280768
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 145  "KI270508.1" chrStart: 3125542912
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 146  "KI270303.1" chrStart: 3125805056
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 147  "KI270381.1" chrStart: 3126067200
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 148  "KI270529.1" chrStart: 3126329344
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 149  "KI270425.1" chrStart: 3126591488
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 150  "KI270396.1" chrStart: 3126853632
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 151  "KI270363.1" chrStart: 3127115776
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 152  "KI270386.1" chrStart: 3127377920
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 153  "KI270465.1" chrStart: 3127640064
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 154  "KI270383.1" chrStart: 3127902208
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 155  "KI270384.1" chrStart: 3128164352
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 156  "KI270330.1" chrStart: 3128426496
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 157  "KI270372.1" chrStart: 3128688640
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 158  "KI270548.1" chrStart: 3128950784
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 159  "KI270580.1" chrStart: 3129212928
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 160  "KI270387.1" chrStart: 3129475072
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 161  "KI270391.1" chrStart: 3129737216
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 162  "KI270305.1" chrStart: 3129999360
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 163  "KI270373.1" chrStart: 3130261504
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 164  "KI270422.1" chrStart: 3130523648
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 165  "KI270316.1" chrStart: 3130785792
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 166  "KI270340.1" chrStart: 3131047936
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 167  "KI270338.1" chrStart: 3131310080
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 168  "KI270583.1" chrStart: 3131572224
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 169  "KI270334.1" chrStart: 3131834368
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 170  "KI270429.1" chrStart: 3132096512
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 171  "KI270393.1" chrStart: 3132358656
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 172  "KI270516.1" chrStart: 3132620800
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 173  "KI270389.1" chrStart: 3132882944
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 174  "KI270466.1" chrStart: 3133145088
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 175  "KI270388.1" chrStart: 3133407232
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 176  "KI270544.1" chrStart: 3133669376
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 177  "KI270310.1" chrStart: 3133931520
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 178  "KI270412.1" chrStart: 3134193664
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 179  "KI270395.1" chrStart: 3134455808
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 180  "KI270376.1" chrStart: 3134717952
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 181  "KI270337.1" chrStart: 3134980096
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 182  "KI270335.1" chrStart: 3135242240
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 183  "KI270378.1" chrStart: 3135504384
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 184  "KI270379.1" chrStart: 3135766528
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 185  "KI270329.1" chrStart: 3136028672
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 186  "KI270419.1" chrStart: 3136290816
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 187  "KI270336.1" chrStart: 3136552960
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 188  "KI270312.1" chrStart: 3136815104
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 189  "KI270539.1" chrStart: 3137077248
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 190  "KI270385.1" chrStart: 3137339392
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 191  "KI270423.1" chrStart: 3137601536
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 192  "KI270392.1" chrStart: 3137863680
+GENOME_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa : chr # 193  "KI270394.1" chrStart: 3138125824
+Number of SA indices: 5891698134
+Mar 01 00:56:27 ... starting to sort Suffix Array. This may take a long time...
+Number of chunks: 172;   chunks size limit: 370848056 bytes
+Mar 01 00:56:47 ... sorting Suffix Array chunks and saving them to disk...
+Writing 173391504 bytes into GENOME_data/star/SA_8 ; empty space on disk = 205828516020224 bytes ... done
+Writing 206909912 bytes into GENOME_data/star/SA_22 ; empty space on disk = 205825428094976 bytes ... done
+Writing 217446712 bytes into GENOME_data/star/SA_29 ; empty space on disk = 205824958775296 bytes ... done
+Writing 204767696 bytes into GENOME_data/star/SA_32 ; empty space on disk = 205824280920064 bytes ... done
+Writing 208915248 bytes into GENOME_data/star/SA_30 ; empty space on disk = 205824280920064 bytes ... done
+Writing 176517296 bytes into GENOME_data/star/SA_25 ; empty space on disk = 205822508269568 bytes ... done
+Writing 193960968 bytes into GENOME_data/star/SA_12 ; empty space on disk = 205821015130112 bytes ... done
+Writing 251686880 bytes into GENOME_data/star/SA_18 ; empty space on disk = 205820091973632 bytes ...Writing 356611864 bytes into GENOME_data/star/SA_19 ; empty space on disk = 205820091973632 bytes ... done
+ done
+Writing 311514168 bytes into GENOME_data/star/SA_37 ; empty space on disk = 205820091973632 bytes ... done
+Writing 218081152 bytes into GENOME_data/star/SA_9 ; empty space on disk = 205820070576128 bytes ... done
+Writing 260350264 bytes into GENOME_data/star/SA_31 ; empty space on disk = 205819685339136 bytes ... done
+Writing 182570464 bytes into GENOME_data/star/SA_5 ; empty space on disk = 205819465383936 bytes ... done
+Writing 190254192 bytes into GENOME_data/star/SA_16 ; empty space on disk = 205819342045184 bytes ... done
+Writing 349223624 bytes into GENOME_data/star/SA_14 ; empty space on disk = 205819342045184 bytes ... done
+Writing 279164656 bytes into GENOME_data/star/SA_13 ; empty space on disk = 205816751161344 bytes ... done
+Writing 232985656 bytes into GENOME_data/star/SA_10 ; empty space on disk = 205816751161344 bytes ... done
+Writing 229150192 bytes into GENOME_data/star/SA_28 ; empty space on disk = 205816751161344 bytes ... done
+Writing 219632072 bytes into GENOME_data/star/SA_35 ; empty space on disk = 205813859696640 bytes ... done
+Writing 232422952 bytes into GENOME_data/star/SA_27 ; empty space on disk = 205808947920896 bytes ... done
+Writing 263072600 bytes into GENOME_data/star/SA_15 ; empty space on disk = 205803027955712 bytes ... done
+Writing 287929304 bytes into GENOME_data/star/SA_4 ; empty space on disk = 205803027955712 bytes ...Writing 232986248 bytes into GENOME_data/star/SA_23 ; empty space on disk = 205803027955712 bytes ... done
+ done
+Writing 316266096 bytes into GENOME_data/star/SA_34 ; empty space on disk = 205802092199936 bytes ... done
+Writing 348732728 bytes into GENOME_data/star/SA_11 ; empty space on disk = 205801621995520 bytes ... done
+Writing 365541792 bytes into GENOME_data/star/SA_33 ; empty space on disk = 205801387360256 bytes ... done
+Writing 326959608 bytes into GENOME_data/star/SA_38 ; empty space on disk = 205800811544576 bytes ... done
+Writing 249543648 bytes into GENOME_data/star/SA_17 ; empty space on disk = 205799945355264 bytes ... done
+Writing 320306280 bytes into GENOME_data/star/SA_7 ; empty space on disk = 205799945355264 bytes ... done
+Writing 225321304 bytes into GENOME_data/star/SA_6 ; empty space on disk = 205799914487808 bytes ... done
+Writing 267574576 bytes into GENOME_data/star/SA_26 ; empty space on disk = 205798870597632 bytes ... done
+Writing 225322440 bytes into GENOME_data/star/SA_36 ; empty space on disk = 205798234570752 bytes ... done
+Writing 270535776 bytes into GENOME_data/star/SA_1 ; empty space on disk = 205798234570752 bytes ... done
+Writing 321324048 bytes into GENOME_data/star/SA_21 ; empty space on disk = 205798145343488 bytes ... done
+Writing 473007664 bytes into GENOME_data/star/SA_3 ; empty space on disk = 205798145343488 bytes ... done
+Writing 307215176 bytes into GENOME_data/star/SA_20 ; empty space on disk = 205797654544384 bytes ... done
+Writing 346685312 bytes into GENOME_data/star/SA_2 ; empty space on disk = 205797654544384 bytes ... done
+Writing 328240512 bytes into GENOME_data/star/SA_39 ; empty space on disk = 205797654544384 bytes ... done
+Writing 374644360 bytes into GENOME_data/star/SA_24 ; empty space on disk = 205796968955904 bytes ... done
+Writing 725537968 bytes into GENOME_data/star/SA_0 ; empty space on disk = 205796968955904 bytes ... done
+Writing 197785016 bytes into GENOME_data/star/SA_48 ; empty space on disk = 205814946938880 bytes ... done
+Writing 221528704 bytes into GENOME_data/star/SA_61 ; empty space on disk = 205809334288384 bytes ... done
+Writing 274629512 bytes into GENOME_data/star/SA_46 ; empty space on disk = 205805822345216 bytes ...Writing 197785264 bytes into GENOME_data/star/SA_52 ; empty space on disk = 205805822345216 bytes ... done
+ done
+Writing 257262440 bytes into GENOME_data/star/SA_58 ; empty space on disk = 205798314786816 bytes ... done
+Writing 206651184 bytes into GENOME_data/star/SA_66 ; empty space on disk = 205785979977728 bytes ... done
+Writing 241796776 bytes into GENOME_data/star/SA_67 ; empty space on disk = 205786699612160 bytes ... done
+Writing 257262440 bytes into GENOME_data/star/SA_71 ; empty space on disk = 205786699612160 bytes ... done
+Writing 257001680 bytes into GENOME_data/star/SA_65 ; empty space on disk = 205786200391680 bytes ...Writing 222299208 bytes into GENOME_data/star/SA_54 ; empty space on disk = 205783747969024 bytes ... done
+ done
+Writing 217070184 bytes into GENOME_data/star/SA_57 ; empty space on disk = 205783747969024 bytes ... done
+Writing 222313016 bytes into GENOME_data/star/SA_70 ; empty space on disk = 205793916092416 bytes ... done
+Writing 206910136 bytes into GENOME_data/star/SA_59 ; empty space on disk = 205794837757952 bytes ... done
+Writing 218506248 bytes into GENOME_data/star/SA_40 ; empty space on disk = 205793937899520 bytes ...Writing 243675976 bytes into GENOME_data/star/SA_43 ; empty space on disk = 205793937899520 bytes ... done
+ done
+Writing 180059520 bytes into GENOME_data/star/SA_41 ; empty space on disk = 205793491058688 bytes ... done
+Writing 190466264 bytes into GENOME_data/star/SA_64 ; empty space on disk = 205793491058688 bytes ... done
+Writing 251686848 bytes into GENOME_data/star/SA_45 ; empty space on disk = 205790878121984 bytes ... done
+Writing 266836664 bytes into GENOME_data/star/SA_77 ; empty space on disk = 205790878121984 bytes ... done
+Writing 209469016 bytes into GENOME_data/star/SA_63 ; empty space on disk = 205789092544512 bytes ... done
+Writing 237802800 bytes into GENOME_data/star/SA_79 ; empty space on disk = 205822123556864 bytes ...Writing 219632304 bytes into GENOME_data/star/SA_55 ; empty space on disk = 205822123556864 bytes ... done
+ done
+Writing 263352112 bytes into GENOME_data/star/SA_69 ; empty space on disk = 205840741597184 bytes ... done
+Writing 232422760 bytes into GENOME_data/star/SA_42 ; empty space on disk = 205840741597184 bytes ... done
+Writing 368967544 bytes into GENOME_data/star/SA_68 ; empty space on disk = 205838861402112 bytes ... done
+Writing 279165992 bytes into GENOME_data/star/SA_62 ; empty space on disk = 205831481655296 bytes ... done
+Writing 366940944 bytes into GENOME_data/star/SA_44 ; empty space on disk = 205831481655296 bytes ... done
+Writing 307347008 bytes into GENOME_data/star/SA_74 ; empty space on disk = 205829737447424 bytes ... done
+Writing 259809456 bytes into GENOME_data/star/SA_76 ; empty space on disk = 205825228046336 bytes ... done
+Writing 225657984 bytes into GENOME_data/star/SA_47 ; empty space on disk = 205801269723136 bytes ... done
+Writing 361610176 bytes into GENOME_data/star/SA_60 ; empty space on disk = 205796067508224 bytes ... done
+Writing 299217704 bytes into GENOME_data/star/SA_75 ; empty space on disk = 205796355145728 bytes ... done
+Writing 267574824 bytes into GENOME_data/star/SA_78 ; empty space on disk = 205796430479360 bytes ... done
+Writing 268644208 bytes into GENOME_data/star/SA_53 ; empty space on disk = 205796430479360 bytes ... done
+Writing 473007664 bytes into GENOME_data/star/SA_49 ; empty space on disk = 205793000669184 bytes ... done
+Writing 352301192 bytes into GENOME_data/star/SA_51 ; empty space on disk = 205791989874688 bytes ... done
+Writing 348436192 bytes into GENOME_data/star/SA_50 ; empty space on disk = 205783929831424 bytes ... done
+Writing 351504976 bytes into GENOME_data/star/SA_72 ; empty space on disk = 205783929831424 bytes ...Writing 271756752 bytes into GENOME_data/star/SA_56 ; empty space on disk = 205783929831424 bytes ... done
+ done
+Writing 338370168 bytes into GENOME_data/star/SA_73 ; empty space on disk = 205767269990400 bytes ... done
+Writing 257001680 bytes into GENOME_data/star/SA_81 ; empty space on disk = 205748467384320 bytes ... done
+Writing 172133384 bytes into GENOME_data/star/SA_83 ; empty space on disk = 205746315722752 bytes ... done
+Writing 208651200 bytes into GENOME_data/star/SA_80 ; empty space on disk = 205738378854400 bytes ... done
+Writing 202477640 bytes into GENOME_data/star/SA_85 ; empty space on disk = 205729230471168 bytes ... done
+Writing 140047576 bytes into GENOME_data/star/SA_91 ; empty space on disk = 205719658217472 bytes ... done
+Writing 249543832 bytes into GENOME_data/star/SA_82 ; empty space on disk = 205716268531712 bytes ... done
+Writing 213139088 bytes into GENOME_data/star/SA_110 ; empty space on disk = 205716268531712 bytes ... done
+Writing 223467944 bytes into GENOME_data/star/SA_84 ; empty space on disk = 205711767240704 bytes ... done
+Writing 277877208 bytes into GENOME_data/star/SA_109 ; empty space on disk = 205709820837888 bytes ... done
+Writing 229002112 bytes into GENOME_data/star/SA_105 ; empty space on disk = 205706028072960 bytes ... done
+Writing 217070184 bytes into GENOME_data/star/SA_102 ; empty space on disk = 205700875747328 bytes ... done
+Writing 173393008 bytes into GENOME_data/star/SA_103 ; empty space on disk = 205699197714432 bytes ... done
+Writing 190466264 bytes into GENOME_data/star/SA_117 ; empty space on disk = 205696831062016 bytes ... done
+Writing 247387528 bytes into GENOME_data/star/SA_112 ; empty space on disk = 205696831062016 bytes ... done
+Writing 348123296 bytes into GENOME_data/star/SA_99 ; empty space on disk = 205692595945472 bytes ... done
+Writing 176517464 bytes into GENOME_data/star/SA_115 ; empty space on disk = 205690851262464 bytes ... done
+Writing 266218960 bytes into GENOME_data/star/SA_114 ; empty space on disk = 205690851262464 bytes ... done
+Writing 193963368 bytes into GENOME_data/star/SA_96 ; empty space on disk = 205693867868160 bytes ... done
+Writing 328594384 bytes into GENOME_data/star/SA_111 ; empty space on disk = 205691395899392 bytes ...Writing 285774120 bytes into GENOME_data/star/SA_95 ; empty space on disk = 205691395899392 bytes ... done
+ done
+Writing 262894912 bytes into GENOME_data/star/SA_92 ; empty space on disk = 205691395899392 bytes ... done
+Writing 332887112 bytes into GENOME_data/star/SA_108 ; empty space on disk = 205688795774976 bytes ... done
+Writing 368141744 bytes into GENOME_data/star/SA_107 ; empty space on disk = 205688795774976 bytes ... done
+Writing 265049480 bytes into GENOME_data/star/SA_101 ; empty space on disk = 205691448934400 bytes ... done
+Writing 283083688 bytes into GENOME_data/star/SA_113 ; empty space on disk = 205687902240768 bytes ... done
+Writing 309977024 bytes into GENOME_data/star/SA_97 ; empty space on disk = 205733381193728 bytes ...Writing 340534920 bytes into GENOME_data/star/SA_106 ; empty space on disk = 205733381193728 bytes ... done
+ done
+Writing 346693088 bytes into GENOME_data/star/SA_86 ; empty space on disk = 205745550917632 bytes ... done
+Writing 317838568 bytes into GENOME_data/star/SA_100 ; empty space on disk = 205743978315776 bytes ... done
+Writing 362545216 bytes into GENOME_data/star/SA_88 ; empty space on disk = 205743978315776 bytes ... done
+Writing 225658344 bytes into GENOME_data/star/SA_89 ; empty space on disk = 205741214515200 bytes ... done
+Writing 302688848 bytes into GENOME_data/star/SA_90 ; empty space on disk = 205737863643136 bytes ... done
+Writing 364558608 bytes into GENOME_data/star/SA_93 ; empty space on disk = 205736919564288 bytes ... done
+Writing 329854880 bytes into GENOME_data/star/SA_116 ; empty space on disk = 205723060092928 bytes ... done
+Writing 326638144 bytes into GENOME_data/star/SA_118 ; empty space on disk = 205714713231360 bytes ... done
+Writing 288900824 bytes into GENOME_data/star/SA_119 ; empty space on disk = 205714713231360 bytes ... done
+Writing 176218792 bytes into GENOME_data/star/SA_125 ; empty space on disk = 205714911182848 bytes ... done
+Writing 274629672 bytes into GENOME_data/star/SA_123 ; empty space on disk = 205714911182848 bytes ...Writing 345185552 bytes into GENOME_data/star/SA_104 ; empty space on disk = 205714511806464 bytes ... done
+ done
+Writing 368941400 bytes into GENOME_data/star/SA_98 ; empty space on disk = 205714511806464 bytes ... done
+Writing 383205784 bytes into GENOME_data/star/SA_121 ; empty space on disk = 205714511806464 bytes ... done
+Writing 358593720 bytes into GENOME_data/star/SA_87 ; empty space on disk = 205714520391680 bytes ... done
+Writing 308516952 bytes into GENOME_data/star/SA_122 ; empty space on disk = 205763911565312 bytes ... done
+Writing 318020528 bytes into GENOME_data/star/SA_94 ; empty space on disk = 205763911565312 bytes ... done
+Writing 270540176 bytes into GENOME_data/star/SA_120 ; empty space on disk = 205726149361664 bytes ... done
+Writing 354252424 bytes into GENOME_data/star/SA_124 ; empty space on disk = 205718382542848 bytes ... done
+Writing 186609208 bytes into GENOME_data/star/SA_150 ; empty space on disk = 205769662906368 bytes ... done
+Writing 197968672 bytes into GENOME_data/star/SA_152 ; empty space on disk = 205766166364160 bytes ... done
+Writing 146335040 bytes into GENOME_data/star/SA_143 ; empty space on disk = 205762632433664 bytes ... done
+Writing 275464512 bytes into GENOME_data/star/SA_128 ; empty space on disk = 205808065511424 bytes ... done
+Writing 211893784 bytes into GENOME_data/star/SA_147 ; empty space on disk = 205800559067136 bytes ... done
+Writing 241796776 bytes into GENOME_data/star/SA_151 ; empty space on disk = 205785340968960 bytes ... done
+Writing 237802800 bytes into GENOME_data/star/SA_133 ; empty space on disk = 205729355661312 bytes ... done
+Writing 198875888 bytes into GENOME_data/star/SA_132 ; empty space on disk = 205719722033152 bytes ... done
+Writing 308166112 bytes into GENOME_data/star/SA_157 ; empty space on disk = 205719722033152 bytes ... done
+Writing 175433680 bytes into GENOME_data/star/SA_154 ; empty space on disk = 205745120559104 bytes ... done
+Writing 319004680 bytes into GENOME_data/star/SA_126 ; empty space on disk = 205745120559104 bytes ...Writing 311514392 bytes into GENOME_data/star/SA_159 ; empty space on disk = 205745120559104 bytes ... done
+ done
+Writing 222550408 bytes into GENOME_data/star/SA_153 ; empty space on disk = 205747550994432 bytes ... done
+Writing 287560032 bytes into GENOME_data/star/SA_127 ; empty space on disk = 205747550994432 bytes ... done
+Writing 218506520 bytes into GENOME_data/star/SA_145 ; empty space on disk = 205747550994432 bytes ... done
+Writing 178998032 bytes into GENOME_data/star/SA_164 ; empty space on disk = 205746047614976 bytes ... done
+Writing 243676312 bytes into GENOME_data/star/SA_134 ; empty space on disk = 205746047614976 bytes ... done
+Writing 232409120 bytes into GENOME_data/star/SA_136 ; empty space on disk = 205744489168896 bytes ... done
+Writing 262894912 bytes into GENOME_data/star/SA_139 ; empty space on disk = 205743576121344 bytes ... done
+Writing 348733736 bytes into GENOME_data/star/SA_130 ; empty space on disk = 205743576121344 bytes ... done
+Writing 229150400 bytes into GENOME_data/star/SA_148 ; empty space on disk = 205740741066752 bytes ... done
+Writing 209469016 bytes into GENOME_data/star/SA_165 ; empty space on disk = 205733846417408 bytes ... done
+Writing 346671904 bytes into GENOME_data/star/SA_158 ; empty space on disk = 205726510530560 bytes ... done
+Writing 196200792 bytes into GENOME_data/star/SA_138 ; empty space on disk = 205726510530560 bytes ... done
+Writing 237874240 bytes into GENOME_data/star/SA_146 ; empty space on disk = 205724341338112 bytes ... done
+Writing 259809456 bytes into GENOME_data/star/SA_144 ; empty space on disk = 205723268186112 bytes ... done
+Writing 287930184 bytes into GENOME_data/star/SA_156 ; empty space on disk = 205719708598272 bytes ... done
+Writing 237213488 bytes into GENOME_data/star/SA_149 ; empty space on disk = 205719708598272 bytes ... done
+Writing 246975800 bytes into GENOME_data/star/SA_131 ; empty space on disk = 205714769559552 bytes ... done
+Writing 237213488 bytes into GENOME_data/star/SA_135 ; empty space on disk = 205708291031040 bytes ... done
+Writing 268644208 bytes into GENOME_data/star/SA_155 ; empty space on disk = 205707250843648 bytes ... done
+Writing 342516808 bytes into GENOME_data/star/SA_129 ; empty space on disk = 205706636886016 bytes ... done
+Writing 320310296 bytes into GENOME_data/star/SA_141 ; empty space on disk = 205706636886016 bytes ... done
+Writing 366629080 bytes into GENOME_data/star/SA_137 ; empty space on disk = 205705549217792 bytes ... done
+Writing 246977816 bytes into GENOME_data/star/SA_163 ; empty space on disk = 205705549217792 bytes ... done
+Writing 7616 bytes into GENOME_data/star/SA_171 ; empty space on disk = 205704037285888 bytes ... done
+Writing 269471120 bytes into GENOME_data/star/SA_161 ; empty space on disk = 205705649946624 bytes ... done
+Writing 302679784 bytes into GENOME_data/star/SA_142 ; empty space on disk = 205705649946624 bytes ... done
+Writing 302679784 bytes into GENOME_data/star/SA_160 ; empty space on disk = 205704596373504 bytes ... done
+Writing 271756752 bytes into GENOME_data/star/SA_140 ; empty space on disk = 205704596373504 bytes ... done
+Writing 374644360 bytes into GENOME_data/star/SA_162 ; empty space on disk = 205703136935936 bytes ... done
+Writing 263072896 bytes into GENOME_data/star/SA_166 ; empty space on disk = 205703136935936 bytes ... done
+Writing 383205784 bytes into GENOME_data/star/SA_167 ; empty space on disk = 205702969556992 bytes ... done
+Writing 358593720 bytes into GENOME_data/star/SA_168 ; empty space on disk = 205700683939840 bytes ... done
+Writing 348429288 bytes into GENOME_data/star/SA_169 ; empty space on disk = 205699684909056 bytes ... done
+Writing 725537968 bytes into GENOME_data/star/SA_170 ; empty space on disk = 205700299194368 bytes ... done
+Mar 01 06:02:30 ... loading chunks from disk, packing SA...
+Mar 01 06:06:05 ... finished generating suffix array
+Mar 01 06:06:05 ... Generating Suffix Array index
+Mar 01 06:09:40 ... Completed Suffix Array index
+Mar 01 06:09:40 ... writing Genome to disk ...
+Writing 3138387968 bytes into GENOME_data/star/Genome ; empty space on disk = 205752648155136 bytes ... done
+SA size in bytes: 24303254806
+Mar 01 06:09:49 ... writing Suffix Array to disk ...
+Writing 24303254806 bytes into GENOME_data/star/SA ; empty space on disk = 205752648155136 bytes ... done
+Mar 01 06:11:04 ... writing SAindex to disk
+Writing 8 bytes into GENOME_data/star/SAindex ; empty space on disk = 205722301497344 bytes ... done
+Writing 120 bytes into GENOME_data/star/SAindex ; empty space on disk = 205722301497344 bytes ... done
+Writing 1565873491 bytes into GENOME_data/star/SAindex ; empty space on disk = 205722301497344 bytes ... done
+Mar 01 06:11:10 ..... finished successfully
+DONE: Genome generation, EXITING
